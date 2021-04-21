@@ -1,0 +1,22 @@
+method: cr
+data:
+  path: data/demo
+  scale_type: cr
+  offset_sequence: 0
+model:
+  encoder_kwargs:
+    hidden_dim: 128
+  encoder_temporal_kwargs:
+    hidden_dim: 128
+  velocity_field_kwargs:
+    hidden_size: 128
+  c_dim: 128
+training:
+  out_dir: out/4d_cr_pretrained
+test:
+  model_file: 4dcr-pretrained.pt
+  threshold: 0.4
+generation:
+  padding: 0.0
+
+

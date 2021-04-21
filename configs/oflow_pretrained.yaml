@@ -1,0 +1,17 @@
+method: oflow
+data:
+  path: data/human_dataset
+  test_split: test
+model:
+  encoder_kwargs:
+    hidden_dim: 128
+  encoder_temporal_kwargs:
+    hidden_dim: 128
+  velocity_field_kwargs:
+    hidden_size: 128
+  c_dim: 128
+training:
+  out_dir:  out/oflow_pretrained
+  n_eval_points: 10000
+test:
+  model_file: oflow_model-3ff330bc.pt

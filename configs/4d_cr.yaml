@@ -1,0 +1,22 @@
+method: cr
+data:
+  path: data/human_dataset
+  n_training_points: 2048
+  scale_type: cr
+model:
+  encoder_kwargs:
+    hidden_dim: 128
+  encoder_temporal_kwargs:
+    hidden_dim: 128
+  velocity_field_kwargs:
+    hidden_size: 128
+  c_dim: 128
+training:
+  out_dir: out/4d_cr
+  n_eval_points: 10000
+  batch_size: 16
+  validate_every: 1000
+test:
+  threshold: 0.4
+generation:
+  padding: 0.0
